@@ -1,0 +1,26 @@
+#txt or file
+*.class
+*.iml
+*.tmp
+*.class
+*.pyc
+.idea/
+.project
+.idea/
+.classpath
+.settings/
+*/target/
+/target/*
+/target/
+/out/
+/log/
+/dist/
+/prism_python.egg-info/
+/sessions/
+*.log
+*.bak*
+#Package Files
+*.jar
+*.war
+*.ear
+*.zip
