@@ -15,25 +15,25 @@ from com.shopex.teegon.TeegonClient import TeegonClient
 class TeegonClientTestCase(unittest.TestCase):
     def setUp(self):
         self.url = "http://api.teegon.com/router"
-        self.key = "xx"
-        self.secret = "xx"
+        # self.url = "http://127.0.0.1:3000/hiproxy"
+        self.key = "XX"
+        self.secret = "XX"
 
         self.teegonClient = TeegonClient(self.url, self.key, self.secret)
 
     def testDoPost(self):
         params = sys_params()
-        params['method'] = "shopex.queue.read"
-        params['topic'] = "orders"
-        params['drop'] = "false"
-        params['num'] = "1"
+        params['method'] = "store.apigateway.request"
+        params['node_id'] = "1876146934"
+        params['api_method'] = "jingdong.pop.PopCommentJsfService.getVenderCommentsForJos"
+        params['params'] = '{"page": "1", "pageSize": "10"}'
         response = self.teegonClient.do_post(params)
         print response
 
 
 def sys_params():
     params = {
-        'timestamp': time.strftime("%Y-%m-%d %H:%M:%S"),
-        'format': 'json',
+
     }
     return params
 
