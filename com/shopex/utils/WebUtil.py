@@ -24,7 +24,7 @@ class WebUtil():
     @staticmethod
     def do_post(url, url_info, params, header_data, is_https=False):
         logger.info("Request Type:do_post \t \n")
-        logger.info("Request Url：%s \t \n" % (url))
+        logger.info("Request Url:%s \t \n" % (url))
         logger.info("Request Params:%s \t \n" % (params))
         logger.info("Request Header Message:%s \t \n" % (header_data))
 
@@ -49,7 +49,7 @@ class WebUtil():
     def do_get(url, url_info, params, header_data, is_https=False):
         url += WebUtil.build_query(params)
         logger.info("Request Type:do_get \t \n")
-        logger.info("Request Url：%s \t \n" % (url))
+        logger.info("Request Url:%s \t \n" % (url))
         logger.info("Request Params:%s \t \n" % (params))
         logger.info("Request Header Message:%s \t \n" % (header_data))
         conn = None
